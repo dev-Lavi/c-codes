@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+void main() {
+    int n,r,cc=0,c=-1,d=0,ask;
+    float p,b=0;
+    printf("for binary to decimal press 0\n");
+    printf("for decimal to binary press 1\n");
+    scanf("%d",&ask);
+    if(ask==0){
+    printf("enter your binary number\n");
+    scanf("%d",&n);
+    //to find number of digits 
+    while(n>0){
+        r=n%10;
+        n=n/10;
+        c++;
+        d=r*pow(2,c)+d;
+    }
+    printf("the decimal value is %d",d);
+    }
+    else{
+    int bn[39];
+    int n;
+    //to store binary
+    int i=0;
+    //counter  
+    printf("enter your number\n");
+    scanf("%d",&n);
+    while(n>0){
+        bn[i]=n%2;
+        n=n/2;
+        i++;
+    }
+    for(int j=i-1;j>=0;j--){
+        printf("%d",bn[j]);
+    }
+}
+}
